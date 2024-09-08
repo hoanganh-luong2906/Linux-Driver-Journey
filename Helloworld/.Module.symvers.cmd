@@ -1,0 +1,1 @@
+savedcmd_/home/hoang-anh/Project/Helloworld/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/hoang-anh/Project/Helloworld/Module.symvers -T /home/hoang-anh/Project/Helloworld/modules.order -i Module.symvers -e 
