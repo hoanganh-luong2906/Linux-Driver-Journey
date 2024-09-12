@@ -10,18 +10,18 @@ static int __init dynamic_major_number_init(void)
 {
 	if (alloc_chrdev_region(&dev, 0, 1, "Dynamic_Major_Number_Dev") < 0)
 	{
-		printk(KERN_INFO "Can not dynamically allocate major number to Kernel Module \n");
+		pr_err("Can not dynamically allocate major number to Kernel Module \n");
 		return -1;
 	}
-	printk(KERN_INFO "Major: %d | Minor: %d \n", MAJOR(dev), MINOR(dev));
-	printk(KERN_INFO "Kernel Module inserted successfully\n");
+	pr_info("Major: %d | Minor: %d \n", MAJOR(dev), MINOR(dev));
+	pr_info("Kernel Module inserted successfully\n");
 	return 0;
 }
 
 static void __exit dynamic_major_number_exit(void)
 {
 	unregister_chrdev_region(dev,1);
-	printk(KERN_INFO "Kernel module removed successfully\n");
+	pr_info("Kernel module removed successfully\n");
 }
 
 module_init(dynamic_major_number_init);
