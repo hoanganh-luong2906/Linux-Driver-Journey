@@ -1,4 +1,4 @@
-obj-m += dummydriver.o
+obj-m += filecreationdriver.o
  
 ifdef ARCH
   #You can update your Beaglebone path here.
