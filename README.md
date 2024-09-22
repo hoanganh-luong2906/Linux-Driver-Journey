@@ -1,4 +1,4 @@
-# Linux Kernel Module - [Your Driver Name]
+# Linux Kernel Module 
 
 ## Overview
 
